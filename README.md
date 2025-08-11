@@ -41,10 +41,10 @@ python generate_heatmaps.py --image fish.png --data_dir data/ --output_dir outpu
 
 このスクリプトは、複数の視線データCSVを読み込み、全体およびユーザー別のヒートマップ画像を output/ フォルダへ自動保存します。
 
-LICENSE
+## LICENSE
 MIT License（詳細はLICENSEファイルをご参照ください）
 
-開発者： iwakazusuwa(Swatchp)
+#### 開発者： iwakazusuwa(Swatchp)
 
 
 
