@@ -35,11 +35,15 @@ gaze-heatmap-generator-mit-license/
 ```
 
 ## 使い方
-```
-python generate_heatmaps.py --image fish.png --data_dir data/ --output_dir output/
-```
+このスクリプトは、コマンドライン操作なしで、ファイルをダブルクリックするだけで実行できます。
 
-このスクリプトは、複数の視線データCSVを読み込み、全体およびユーザー別のヒートマップ画像を output/ フォルダへ自動保存します。
+実行すると、複数の視線データCSVを読み込み、全体およびユーザー別のヒートマップ画像を output/ フォルダへ自動保存します。
+
+## 注意点
+ファイル名や場所を変えたい場合は、スクリプト内の設定を変更してください。
+
+実行結果の画像が作成されるまで少し時間がかかることがあります。
+
 
 ## LICENSE
 MIT License（詳細はLICENSEファイルをご参照ください）
