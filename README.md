@@ -1,24 +1,29 @@
-# gaze-heatmap-mit-license
+# gaze-heatmap-generator-mit-license
 
-複数ユーザーによる視線データを統合し、広告などの画像に対して全体ヒートマップと個別ヒートマップを作成するPythonツールです。
+複数ユーザーによる視線データを統合し、広告などの画像に対して全体ヒートマップと個別ヒートマップを作成する Python ツールです。
+
+---
 
 ## 概要
 
-- 複数ユーザーのCSV形式視線データを統合し、KDEによるヒートマップを生成
+- 複数ユーザーの CSV 形式視線データを統合し、KDE によるヒートマップを生成
 - 全体マップとユーザーごとのマップを自動生成
 - 画像サイズを縮小して処理を高速化（`GRID_SCALE` によって調整可能）
 - 出力画像は透明度付きのヒートマップとして保存（`all_users_heatmap.png`、および `per_user/{user_id}.png`）
 
-## 必要な環境・依存パッケージ
+---
 
-- Python 3.x  
-- pandas, numpy, matplotlib, scipy, pillow, japanize_matplotlib など
+## 特徴
 
-```bash
-pip install pandas numpy matplotlib scipy pillow japanize_matplotlib
-```
+- 複数ユーザーの視線データを統合し、全体の注視傾向を可視化
+- ユーザーごとの個別ヒートマップも生成可能
+- 画像サイズの縮小による処理速度の向上
+- 出力画像は PNG 形式で保存され、透明度付きで視覚的にわかりやすい
 
-## フォルダ構成例
+---
+
+## フォルダ構成
+
 ```
 gaze-heatmap-generator-mit-license/
 ├── 1_flow/
@@ -34,18 +39,37 @@ gaze-heatmap-generator-mit-license/
 └── LICENSE                        # MIT License
 ```
 
+
+---
+
 ## 使い方
-このスクリプトは、コマンドライン操作なしで、ファイルをダブルクリックするだけで実行できます。
 
-実行すると、複数の視線データCSVを読み込み、全体およびユーザー別のヒートマップ画像を output/ フォルダへ自動保存します。
+1. `2_data/gaze_data.csv` にユーザーごとの視線データを準備（CSV 形式）
+2. `1_flow/generate_heatmaps.py` を実行してヒートマップを生成
 
-## 注意点
-ファイル名や場所を変えたい場合は、スクリプト内の設定を変更してください。
+```bash
+python 1_flow/generate_heatmaps.py
+```
 
-実行結果の画像が作成されるまで少し時間がかかることがあります。
+# 必要な環境・依存パッケージ
+- Python 3.x
+- 必要なパッケージ：
+```
+pip install pandas numpy matplotlib scipy pillow japanize_matplotlib
+```
 
+# 今後の展望
+- ユーザーインターフェースの改善
+- 他の視線データ形式への対応
+- ヒートマップ生成の高速化
 
-## LICENSE
+# 貢献方法
+プロジェクトへの貢献は以下の方法で歓迎します：
+- バグ報告や機能追加の提案は Issues で
+- コード改善や新機能追加は Pull Request で
+- ドキュメント改善や翻訳も歓迎
+
+# LICENSE
 MIT License（詳細はLICENSEファイルをご参照ください）
 
 #### 開発者： iwakazusuwa(Swatchp)
